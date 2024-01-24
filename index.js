@@ -9,9 +9,9 @@ app.use(cors(), express.json());
 app.use(helmet());
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
+    host: "44.221.150.42",
+    user: "nameuser",
+    password: "password",
     database: 'botarga'
 });
 
