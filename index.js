@@ -10,8 +10,8 @@ app.use(helmet());
 
 const db = mysql.createConnection({
     host: "44.221.150.42",
-    user: "nameuser",
-    password: "password",
+    user: "usuario",
+    password: "contrasena",
     database: 'botarga'
 });
 
