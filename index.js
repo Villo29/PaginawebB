@@ -9,10 +9,10 @@ app.use(cors(), express.json());
 app.use(helmet());
 
 const db = mysql.createConnection({
-    host: "44.221.150.42",
-    user: "usuario",
-    password: "contrasena",
-    database: 'botarga'
+    host: "www.db4free.net",
+    user: "chupalo234",
+    password: "cereza23",
+    database: 'jasailivefr33'
 });
 
 
@@ -34,7 +34,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 
 app.post('/user', (req, res) => {
-    let sql = 'INSERT INTO usuario SET ? ';
+    let sql = 'INSERT INTO usuarios SET ? ';
     let query = db.query(sql, req.body, (err, result) => {
         if (err) throw err;
         console.log('status: 200');
@@ -44,7 +44,7 @@ app.post('/user', (req, res) => {
 
 
 app.get('/usuarios', (req, res) => {
-    let sql = 'SELECT * FROM usuario';
+    let sql = 'SELECT * FROM usuarios';
     let query = db.query(sql, (err, results) => {
         if (err) throw err;
         console.log('status: 200');
